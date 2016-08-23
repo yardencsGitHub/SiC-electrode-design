@@ -1,6 +1,19 @@
 function create_bent_design(total_length,edge_dim,bent_start,pad_size,chan_num,chan_width,chan_space,phi_max)
 % This script creates a curved electrode assembly design with the following
-% geometry and parameters
+% geometry and parameters:
+% The straight shank length (in mm) is set by the input parameter
+% 'total_length' and used to normalize all other measurements. The
+% resulting device is scaled to 1 = total_length.
+% The design is made of shanks that are evenly apaced at their base, start with a straight segment,
+% and spread in constant curvatures to a predefined width. 
+% The device parameters:
+%   chan_num    - Number of shanks.
+%   edge_dim    - The width (in mm) of the device at the tips.
+%   bent_start  - The length (in mm) of the straight stem of the shanks.
+%   pad_size    - The length (in mm) of the electrode pads at the tips.
+%   chan_width  - The width of each shank (in mm).
+%   chan_space  - The spacing between shanks (in mm) at the base of the device.
+%   phi_max     - The maximal curving angle of the device. (in radians)
 
 % total_length=5;
 % edge_dim=1;
