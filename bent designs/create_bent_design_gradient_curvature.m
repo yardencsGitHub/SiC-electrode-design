@@ -45,7 +45,7 @@ ds=1e-4;
         line([0 min(X1)],[chan_centers(chan)-width_ratio/2 chan_centers(chan)-width_ratio/2],'Color','k');
         x1 = X1(end); y1 = Y1(end);
         [S,X,Y,Ytag,K] = draw_bent_line(chan_centers(chan),straight_ratio,chan_centers(chan)-width_ratio/2,0,1e-6,dkds(chan)-delta_k*width_ratio/2*sign(chan_centers(chan)-0.5),ds,1,[0 width_ratio*(chan_centers(chan)<=0.5)],1); %-0*
-        line([0 min(X)],[chan_centers(chan)-width_ratio/2 chan_centers(chan)-width_ratio/2],'Color','k');
+        line([0 min(X)],[chan_centers(chan)+width_ratio/2 chan_centers(chan)+width_ratio/2],'Color','k');
         tipx = (X(end)+x1)/2 + cos(atan(Ytag(end)))*edge_point_ratio; 
         tipy = (Y(end)+y1)/2 + sin(atan(Ytag(end)))*edge_point_ratio*sign(chan_centers(chan)-0.5);
         line([x1 tipx],[y1 tipy],'Color','k');
